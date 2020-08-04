@@ -1,0 +1,7 @@
+## Interface: 20400
+## Title: RaukinShamanRange
+## Notes: Shaman totem range indication
+## Author: Raukin
+## SavedVariables: RaukinShamanRangeDB
+embeds.xml
+RaukinShamanRange.lua
