@@ -89,6 +89,9 @@ function RaukinShamanRange.ADDON_LOADED(self,event,arg1)
 			RaukinShamanRange:SetScript("OnUpdate", RaukinShamanRange.Onupdate)
 		else
             		RaukinShamanRange:UnregisterEvent("ADDON_LOADED")
+			RaukinShamanRange:UnregisterEvent("PLAYER_ENTER_COMBAT")
+			RaukinShamanRange:UnregisterEvent("PLAYER_REGEN_ENABLED")
+			RaukinShamanRange:UnregisterEvent("PARTY_MEMBERS_CHANGED")
             		return
 		end
 	end
@@ -120,7 +123,7 @@ end
 
 function RaukinShamanRange.HasTotemBuff(partyplayer)
 	for i=1,40 do
-		if (UnitBuff(partyplayer,i)=="Grace of Air" or UnitBuff(partyplayer,i)=="Wrath of Air Totem" or UnitBuff(partyplayer,i)=="Totem of Wrath" or UnitBuff(partyplayer,i)=="Mana Tide Totem") then
+		if (UnitBuff(partyplayer,i)=="Strength of Earth Totem" or UnitBuff(partyplayer,i)=="Grace of Air" or UnitBuff(partyplayer,i)=="Wrath of Air Totem" or UnitBuff(partyplayer,i)=="Totem of Wrath" or UnitBuff(partyplayer,i)=="Mana Tide Totem") then
 			return true
 		end
 	end
