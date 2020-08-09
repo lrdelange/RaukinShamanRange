@@ -153,7 +153,7 @@ function RaukinShamanRange.Onupdate()
 		end
 
 		if RaukinShamanRange.HasTotemBuff("party2") then
-			RaukinShamanRangeframe.Name1:SetTextColor(0,1,0,1)
+			RaukinShamanRangeframe.Name2:SetTextColor(0,1,0,1)
 		else
 			if IsItemInRange(21991, "party2")==1 then
 				RaukinShamanRangeframe.Name2:SetTextColor(1,1,1,1)
@@ -163,7 +163,7 @@ function RaukinShamanRange.Onupdate()
 		end
 
 		if RaukinShamanRange.HasTotemBuff("party3") then
-			RaukinShamanRangeframe.Name1:SetTextColor(0,1,0,1)
+			RaukinShamanRangeframe.Name3:SetTextColor(0,1,0,1)
 		else
 			if IsItemInRange(21991, "party3")==1 then
 				RaukinShamanRangeframe.Name3:SetTextColor(1,1,1,1)
@@ -173,7 +173,7 @@ function RaukinShamanRange.Onupdate()
 		end
 
 		if RaukinShamanRange.HasTotemBuff("party4") then
-			RaukinShamanRangeframe.Name1:SetTextColor(0,1,0,1)
+			RaukinShamanRangeframe.Name4:SetTextColor(0,1,0,1)
 		else
 			if IsItemInRange(21991, "party4")==1 then
 				RaukinShamanRangeframe.Name4:SetTextColor(1,1,1,1)
