@@ -21,7 +21,7 @@ function RaukinShamanRange.ADDON_LOADED(self,event,arg1)
 			if not(RaukinShamanRangeDB.Lock) then
 				local g=nil
 				local h=nil
-				g,h = GetItemInfo(21993) 
+				g,h = GetItemInfo(21991) 
 				SendChatMessage("Please click here: "..h,SAY)
 			end
 			
@@ -152,9 +152,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party1") then
 			RaukinShamanRangeframe.Name1:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21993, "party1")==1 then
+			if IsItemInRange(21991, "party1")==1 then
 				RaukinShamanRangeframe.Name1:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21993, "party1")==0 then
+			elseif IsItemInRange(21991, "party1")==0 then
 				RaukinShamanRangeframe.Name1:SetTextColor(1,0,0,1)
 			end
 		end
@@ -162,9 +162,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party2") then
 			RaukinShamanRangeframe.Name2:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21993, "party2")==1 then
+			if IsItemInRange(21991, "party2")==1 then
 				RaukinShamanRangeframe.Name2:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21993, "party2")==0 then
+			elseif IsItemInRange(21991, "party2")==0 then
 				RaukinShamanRangeframe.Name2:SetTextColor(1,0,0,1)
 			end
 		end
@@ -172,9 +172,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party3") then
 			RaukinShamanRangeframe.Name3:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21993, "party3")==1 then
+			if IsItemInRange(21991, "party3")==1 then
 				RaukinShamanRangeframe.Name3:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21993, "party3")==0 then
+			elseif IsItemInRange(21991, "party3")==0 then
 				RaukinShamanRangeframe.Name3:SetTextColor(1,0,0,1)
 			end
 		end
@@ -182,9 +182,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party4") then
 			RaukinShamanRangeframe.Name4:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21993, "party4")==1 then
+			if IsItemInRange(21991, "party4")==1 then
 				RaukinShamanRangeframe.Name4:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21993, "party4")==0 then
+			elseif IsItemInRange(21991, "party4")==0 then
 				RaukinShamanRangeframe.Name4:SetTextColor(1,0,0,1)
 			end
 		end
