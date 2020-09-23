@@ -19,7 +19,9 @@ function RaukinShamanRange.ADDON_LOADED(self,event,arg1)
 			RaukinShamanRangeDB = RaukinShamanRangeDB or {}
 			RaukinShamanRangeDB.First = RaukinShamanRangeDB.First or true
 			if RaukinShamanRangeDB.First then
-				local a,b = GetItemInfo(21519) 
+				local a=nil
+				local b=nil
+				a,b = GetItemInfo(21519) 
 				SendChatMessage("Please click here: "..b,SAY)
 				RaukinShamanRangeDB.First=false
 			end
