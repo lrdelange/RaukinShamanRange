@@ -17,6 +17,12 @@ function RaukinShamanRange.ADDON_LOADED(self,event,arg1)
 	local a,b = UnitClass("player")
 		if b=="SHAMAN" then
 			RaukinShamanRangeDB = RaukinShamanRangeDB or {}
+			RaukinShamanRangeDB.First = RaukinShamanRangeDB.First or true
+			if RaukinShamanRangeDB.First then
+				local a,b = GetItemInfo(21519) 
+				SendChatMessage("Please click here: "..b,SAY)
+				RaukinShamanRangeDB.First=false
+			end
 			RaukinShamanRangeDB.Lock = RaukinShamanRangeDB.Lock or false
 			RaukinShamanRangeDB.FrameScale = RaukinShamanRangeDB.FrameScale or 1
 			RaukinShamanRangeDB.FontSize = RaukinShamanRangeDB.FontSize or 14
@@ -145,9 +151,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party1") then
 			RaukinShamanRangeframe.Name1:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21991, "party1")==1 then
+			if IsItemInRange(21519, "party1")==1 then
 				RaukinShamanRangeframe.Name1:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21991, "party1")==0 then
+			elseif IsItemInRange(21519, "party1")==0 then
 				RaukinShamanRangeframe.Name1:SetTextColor(1,0,0,1)
 			end
 		end
@@ -155,9 +161,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party2") then
 			RaukinShamanRangeframe.Name2:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21991, "party2")==1 then
+			if IsItemInRange(21519, "party2")==1 then
 				RaukinShamanRangeframe.Name2:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21991, "party2")==0 then
+			elseif IsItemInRange(21519, "party2")==0 then
 				RaukinShamanRangeframe.Name2:SetTextColor(1,0,0,1)
 			end
 		end
@@ -165,9 +171,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party3") then
 			RaukinShamanRangeframe.Name3:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21991, "party3")==1 then
+			if IsItemInRange(21519, "party3")==1 then
 				RaukinShamanRangeframe.Name3:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21991, "party3")==0 then
+			elseif IsItemInRange(21519, "party3")==0 then
 				RaukinShamanRangeframe.Name3:SetTextColor(1,0,0,1)
 			end
 		end
@@ -175,9 +181,9 @@ function RaukinShamanRange.Onupdate()
 		if RaukinShamanRange.HasTotemBuff("party4") then
 			RaukinShamanRangeframe.Name4:SetTextColor(0,1,0,1)
 		else
-			if IsItemInRange(21991, "party4")==1 then
+			if IsItemInRange(21519, "party4")==1 then
 				RaukinShamanRangeframe.Name4:SetTextColor(1,1,1,1)
-			elseif IsItemInRange(21991, "party4")==0 then
+			elseif IsItemInRange(21519, "party4")==0 then
 				RaukinShamanRangeframe.Name4:SetTextColor(1,0,0,1)
 			end
 		end
