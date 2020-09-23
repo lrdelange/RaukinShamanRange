@@ -17,15 +17,14 @@ function RaukinShamanRange.ADDON_LOADED(self,event,arg1)
 	local a,b = UnitClass("player")
 		if b=="SHAMAN" then
 			RaukinShamanRangeDB = RaukinShamanRangeDB or {}
-			RaukinShamanRangeDB.First = RaukinShamanRangeDB.First or true
-			if RaukinShamanRangeDB.First then
-				local a=nil
-				local b=nil
-				a,b = GetItemInfo(21519) 
-				SendChatMessage("Please click here: "..b,SAY)
-				RaukinShamanRangeDB.First=false
-			end
 			RaukinShamanRangeDB.Lock = RaukinShamanRangeDB.Lock or false
+			if not(RaukinShamanRangeDB.Lock) then
+				local g=nil
+				local h=nil
+				g,h = GetItemInfo(21519) 
+				SendChatMessage("Please click here: "..h,SAY)
+			end
+			
 			RaukinShamanRangeDB.FrameScale = RaukinShamanRangeDB.FrameScale or 1
 			RaukinShamanRangeDB.FontSize = RaukinShamanRangeDB.FontSize or 14
 			RaukinShamanRangeDB.ShowWhen = RaukinShamanRangeDB.ShowWhen or "In Party"
